@@ -12,4 +12,4 @@ Scenario: On home page: User clicks on Menu button:
 	Then User should see www.espoCRM.com link on top tables
 	Then user should click menu button 
 	And click log out 
-	Then user should see log in page
+	Then user should see log in page  

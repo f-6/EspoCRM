@@ -7,4 +7,4 @@ Scenario: On home page: User clicks on Menu button:
 	And user clicks on one of the listed results
 	Then user should see cridentials 
 	And user should click dropdown button right side of edit button
-	Then user should click remove button
+	Then user should click remove button 
