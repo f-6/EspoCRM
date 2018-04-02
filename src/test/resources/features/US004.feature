@@ -22,7 +22,7 @@ Then User should verify Calendar is month option and no Calls is shown( beacause
 
 Examples:
 |title		 |	auto-refresh Interval| 	mode	|
-| Fantastic 6| 10 minutes			 | Month	|
+| Fantastic 6| 	10 minutes			 | Month	|
 
 
 
