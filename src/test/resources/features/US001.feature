@@ -5,21 +5,21 @@ Scenario: Login Page all visible funtionalities
 	Given User is on application login page
 	And User should see EspoCRM title
 	And User should see EspoCRM logo 
-	And User should see Username and Password boxes
-	Then User should see Login button and Forgot Password? link
+	And User should see Username, Password boxes
+	Then User should see Login button, Forgot Password? text link
 
-Scenario: User is clicking Forgot Password? link
-	Given User should see Submit, Close, Username, Email address, Password Change Request text and x close buttons
-	And User should able to enter Username and Email Address
+Scenario: User is clicking Forgot Password? text link
+	Given User should see Submit, Close, Username, Email address, Password Change Request text, x close buttons
+	And User should able to enter Username, Email Address
 	Then User should click Close button
 	
 Scenario: Successful Login with Valid Credentials
 	Given User is on application login page
-	And User enters Username and Password
+	And User enters Username, Password
 	Then User should see HomePage of site
 	
 Scenario: Home page all visible functionalities
-	Given User should see Search box and Search button
+	Given User should see Search box, Search button
 	And User should see and click Notification button
 	And User should see and click Create + sign button
 	And User should see and click Menu button
