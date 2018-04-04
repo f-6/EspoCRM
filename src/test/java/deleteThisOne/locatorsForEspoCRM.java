@@ -62,12 +62,31 @@ public class locatorsForEspoCRM {
 	@FindBy(xpath="//ul[@class='nav navbar-nav tabs']//a[contains(@class,'nav-link')]")
 	public WebElement leftMenuBarElements;
 	
-	//To verify this element has daslets on board or not, you can use attribute&value:
-	//									-->data-gs-current-height="0"
-	//									-->style="height: 0px;"
-	//if their values are equal to 0, than it means there is no dashlets on the board.
+	@FindBy(xpath="//span[contains(text(),'Contacts')]")
+	public WebElement menuBarContacts;
+	
+	
+	/**To verify this element has daslets on board or not, you can use attribute&value:
+	 *									-->data-gs-current-height="0"
+	 *									-->style="height: 0px;"
+	 *if their values are equal to 0, than it means there is no dashlets on the board.
+	 */
 	@FindBy(xpath="//div[@class='dashlets grid-stack grid-stack-4 row grid-stack-instance-1068']")
 	public WebElement dasletBoard;
+	
+	@FindBy(xpath="//a[@class='btn btn-primary action']")
+	public WebElement createBtn;
+	
+	/**FROM here THESE WebElements found in Account Create page: US009
+	 */
+	@FindBy(xpath="select[@name='salutationName']")
+	public WebElement salutationField;
+	
+	@FindBy(xpath="//input[@name='firstName']")
+	public WebElement firstNameField;
+	
+	@FindBy(xpath="//input[@name='lastName']")
+	public WebElement lastNameField;
 	
 	
 }
