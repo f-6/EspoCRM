@@ -1,3 +1,4 @@
+@us002
 Feature: Dashlet window functionalities
 
 Scenario: Add and Add all Dashlet windows
