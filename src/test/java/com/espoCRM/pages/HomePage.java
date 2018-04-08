@@ -14,32 +14,32 @@ import com.espoCRM.utilities.Driver;
 
 public class HomePage {
 
-	private WebDriver driver;
+	private WebDriver driver = Driver.getDriver();
 	
 	public HomePage() {
 		driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
-
+	
 	@FindBy(xpath = "//span[@class='glyphicon glyphicon-plus']")
-	public WebElement HomePageAddBtn;
+	public WebElement homePageAddBtn;
 
 
 	@FindBy(xpath = "//button[@class='btn btn-default pull-right add']")
-	public WebElement AddDashletAddBtn;
+	public WebElement addDashletAddBtn;
 	
 	@FindBy(xpath = "//span[@aria-hidden='true']")
 	public List<WebElement> addDeshletCloseBtn;
 	
 	
 	@FindBy(xpath = "dropdown-toggle btn btn-link btn-sm menu-button")
-	public WebElement DropDownBtnOnDeshlet;
+	public WebElement dropDownBtnOnDeshlet;
 	
 	@FindBy(xpath = "//span[@class='glyphicon glyphicon-remove']")
-	public WebElement RemoveBtnOnDeshlet;
+	public WebElement removeBtnOnDeshlet;
 	
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
-	public WebElement CofirmRemovingBtnOnDeshlet;
+	public WebElement cofirmRemovingBtnOnDeshlet;
 	
 
 	public void addAllDeshlets() {
@@ -62,5 +62,8 @@ public class HomePage {
 		for(WebElement each : listing) {
 			each.click();
 		}
+	}
+	public void login() {
+		System.out.println("Im loggin in");
 	}
 }

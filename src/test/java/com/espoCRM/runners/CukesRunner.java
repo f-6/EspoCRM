@@ -7,7 +7,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		plugin = {"html:target/cucumber"},
 		features="src/test/resources/features/",
 		glue="com/espoCRM/step_definitions/",
-		tags = "@us002",
+		tags = "@us004",
 		dryRun = false
 )
 public class CukesRunner extends AbstractTestNGCucumberTests {

@@ -8,46 +8,61 @@
       <![CDATA[<div "result">User adds Calendar (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">User clicks Drop Down menu on a Calendar (PASSED : 0s)</div>]]>
+      <![CDATA[<div "result">User should verify Calendar Box displayed (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">User should verify all options in the menu (PASSED : 0s)</div>]]>
+      <![CDATA[<div "result">If there are scheduled events on the calendar User should click on each event and remove (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">User clicks on View Calendar (PASSED : 0s)</div>]]>
+      <![CDATA[<div "result">User should verify pop up box is displayed (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">User clicks any date and create new Meeting with valid credentials in excel sheet &quot;dataUS003.xlsx&quot; and &quot;Sheet1&quot; (PASSED : 0s)</div>]]>
+      <![CDATA[<div "result">User should confirm. (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">User clicks Full Form and click on Save button (PASSED : 0s)</div>]]>
+      <![CDATA[<div "result">User should verify if event has removed (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">User should verify given credentials are present in Overview box (PASSED : 0s)</div>]]>
+      <![CDATA[<div "result">User clicks on calendar menu option and click on Options (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User should change &quot;Fantastic 6&quot; &quot;10 minutes&quot; &quot;Month&quot; and  What to display remove all by clicking. (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User clicks on save Btn (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User should verify Not Valid error message. (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User checks Calls (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User should verify Calendar is month option and no Calls is shown( beacause User didnot create one) (PASSED : 0s)</div>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3061" started-at="2018-04-08T00:25:40Z" finished-at="2018-04-08T00:25:43Z">
+  <suite name="Default suite" duration-ms="2546" started-at="2018-04-08T21:25:57Z" finished-at="2018-04-08T21:25:59Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="3061" started-at="2018-04-08T00:25:40Z" finished-at="2018-04-08T00:25:43Z">
+    <test name="Default test" duration-ms="2546" started-at="2018-04-08T21:25:57Z" finished-at="2018-04-08T21:25:59Z">
       <class name="com.espoCRM.runners.CukesRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="setUpClass" is-config="true" duration-ms="183" started-at="2018-04-08T00:25:40Z" finished-at="2018-04-08T00:25:40Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="setUpClass" is-config="true" duration-ms="195" started-at="2018-04-08T21:25:57Z" finished-at="2018-04-08T21:25:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="runScenario" duration-ms="2236" started-at="2018-04-08T00:25:40Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-04-08T00:25:42Z">
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="runScenario" duration-ms="2260" started-at="2018-04-08T21:25:57Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-04-08T21:25:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Add Calendar on dashboard"]]>
+                <![CDATA["Remove Calendar events"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Calendar Event"]]>
+                <![CDATA["Calendar Manipulating"]]>
               </value>
             </param>
           </params>
@@ -59,42 +74,57 @@
               <![CDATA[<div "result">User adds Calendar (PASSED : 0s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">User clicks Drop Down menu on a Calendar (PASSED : 0s)</div>]]>
+              <![CDATA[<div "result">User should verify Calendar Box displayed (PASSED : 0s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">User should verify all options in the menu (PASSED : 0s)</div>]]>
+              <![CDATA[<div "result">If there are scheduled events on the calendar User should click on each event and remove (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User should verify pop up box is displayed (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User should confirm. (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User should verify if event has removed (PASSED : 0s)</div>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="runScenario" duration-ms="557" started-at="2018-04-08T00:25:42Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-04-08T00:25:43Z">
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="runScenario" duration-ms="16" started-at="2018-04-08T21:25:59Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-04-08T21:25:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Create meeting with given Credentials"]]>
+                <![CDATA[""]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Calendar Event"]]>
+                <![CDATA["Calendar Manipulating"]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<div "result">User clicks on View Calendar (PASSED : 0s)</div>]]>
+              <![CDATA[<div "result">User clicks on calendar menu option and click on Options (PASSED : 0s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">User clicks any date and create new Meeting with valid credentials in excel sheet &quot;dataUS003.xlsx&quot; and &quot;Sheet1&quot; (PASSED : 0s)</div>]]>
+              <![CDATA[<div "result">User should change &quot;Fantastic 6&quot; &quot;10 minutes&quot; &quot;Month&quot; and  What to display remove all by clicking. (PASSED : 0s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">User clicks Full Form and click on Save button (PASSED : 0s)</div>]]>
+              <![CDATA[<div "result">User clicks on save Btn (PASSED : 0s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">User should verify given credentials are present in Overview box (PASSED : 0s)</div>]]>
+              <![CDATA[<div "result">User should verify Not Valid error message. (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User checks Calls (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User should verify Calendar is month option and no Calls is shown( beacause User didnot create one) (PASSED : 0s)</div>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="tearDownClass" is-config="true" duration-ms="4" started-at="2018-04-08T00:25:43Z" finished-at="2018-04-08T00:25:43Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="tearDownClass" is-config="true" duration-ms="8" started-at="2018-04-08T21:25:59Z" finished-at="2018-04-08T21:25:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

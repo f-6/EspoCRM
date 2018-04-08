@@ -1,7 +1,6 @@
+@us004
 Feature: Calendar Manipulating
 
-Background: Login to app
-Given User logged in EspoCRM
 
 Scenario: Remove Calendar events
 When User clicks on Add Dashlet button
