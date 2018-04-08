@@ -3,6 +3,8 @@ package com.espoCRM.step_definitions;
 import org.testng.Assert;
 
 import com.espoCRM.pages.HomePage;
+import com.espoCRM.utilities.ConfigurationReader;
+import com.espoCRM.utilities.Driver;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,15 +13,21 @@ import cucumber.api.java.en.When;
 public class US004_stepDefs {
 	HomePage home = new HomePage();
 	
-
+	
+	@Given("^User logged in espoCRM$")
+	public void user_logged_in_espoCRM() {
+	    Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+	}
+	
 	@Then("^User should verify Calendar Box displayed$")
 	public void user_should_verify_Calendar_Box_displayed() {
-		
+		Assert.assertTrue(home.calendarDashLet.isDisplayed());
 	}
 
 	@Then("^If there are scheduled events on the calendar User should click on each event and remove$")
 	public void if_there_are_scheduled_events_on_the_calendar_User_should_click_on_each_event_and_remove() {
-	    
+		
+	    Assert.assertTrue(true);
 	}
 
 	@Then("^User should verify pop up box is displayed$")

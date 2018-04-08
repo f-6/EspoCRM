@@ -24,7 +24,9 @@ public class HomePage {
 	
 	@FindBy(xpath = "//span[@class='glyphicon glyphicon-plus']")
 	public WebElement homePageAddBtn;
-
+	
+	@FindBy(xpath = "(//div[@class='grid-stack-item-content dashlet-container']/div[@data-name='Calendar'])[1]")
+	public WebElement calendarDashLet;
 
 	@FindBy(xpath = "//button[@class='btn btn-default pull-right add']")
 	public List<WebElement> addDashletAddBtn;

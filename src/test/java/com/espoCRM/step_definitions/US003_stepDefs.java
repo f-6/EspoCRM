@@ -15,7 +15,7 @@ public class US003_stepDefs {
 	@When("^User clicks on Add Dashlet button$")
 	public void user_clicks_on_Add_Dashlet_button() {
 	    System.out.println("User clicks on Add Dashlet button");
-	    home.addAllDeshlets();
+//	    home.addAllDeshlets();
 	}
 
 	@When("^User adds Calendar$")
