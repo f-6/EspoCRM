@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[<div "result">User clicks on Add Dashlet button (PASSED : 2s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User adds Calendar (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User clicks Drop Down menu on a Calendar (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User should verify all options in the menu (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User clicks on View Calendar (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User clicks any date and create new Meeting with valid credentials in excel sheet &quot;dataUS003.xlsx&quot; and &quot;Sheet1&quot; (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User clicks Full Form and click on Save button (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">User should verify given credentials are present in Overview box (PASSED : 0s)</div>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3061" started-at="2018-04-08T00:25:40Z" finished-at="2018-04-08T00:25:43Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="3061" started-at="2018-04-08T00:25:40Z" finished-at="2018-04-08T00:25:43Z">
+      <class name="com.espoCRM.runners.CukesRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="setUpClass" is-config="true" duration-ms="183" started-at="2018-04-08T00:25:40Z" finished-at="2018-04-08T00:25:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="runScenario" duration-ms="2236" started-at="2018-04-08T00:25:40Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-04-08T00:25:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add Calendar on dashboard"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Calendar Event"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">User clicks on Add Dashlet button (PASSED : 2s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User adds Calendar (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User clicks Drop Down menu on a Calendar (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User should verify all options in the menu (PASSED : 0s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="runScenario" duration-ms="557" started-at="2018-04-08T00:25:42Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-04-08T00:25:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create meeting with given Credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Calendar Event"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">User clicks on View Calendar (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User clicks any date and create new Meeting with valid credentials in excel sheet &quot;dataUS003.xlsx&quot; and &quot;Sheet1&quot; (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User clicks Full Form and click on Save button (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">User should verify given credentials are present in Overview box (PASSED : 0s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.espoCRM.runners.CukesRunner@27c20538]" name="tearDownClass" is-config="true" duration-ms="4" started-at="2018-04-08T00:25:43Z" finished-at="2018-04-08T00:25:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.espoCRM.runners.CukesRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
