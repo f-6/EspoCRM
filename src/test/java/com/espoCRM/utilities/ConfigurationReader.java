@@ -1,4 +1,4 @@
-package com.app.utilities;
+package com.espoCRM.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -9,7 +9,7 @@ public class ConfigurationReader {
 	static {
 
 		try {
-			String path = "configuration.properties";
+			String path = "config.properties";
 			FileInputStream input = new FileInputStream(path);
 
 			configFile = new Properties();

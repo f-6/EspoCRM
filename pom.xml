@@ -4,10 +4,11 @@
   <artifactId>EspoCRM</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-   <properties>
+   	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+
 <dependencies>
 		
 		<!-- This project generates pretty cucumber html reports on the fly. 
@@ -67,7 +68,7 @@
 
 	</dependencies>
 
-	<build>
+	<!-- <build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -80,7 +81,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>
+	</build> -->
   
   
 </project>

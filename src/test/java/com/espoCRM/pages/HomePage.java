@@ -1,4 +1,4 @@
-package pages;
+package com.espoCRM.pages;
 
 import java.util.List;
 
@@ -6,12 +6,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+
+import com.espoCRM.utilities.Driver;
 
 
 public class HomePage {
 
 	private WebDriver driver;
+	
+	public HomePage() {
+		driver = Driver.getDriver();
+		PageFactory.initElements(driver, this);
+	}
 
 	@FindBy(xpath = "//span[@class='glyphicon glyphicon-plus']")
 	public WebElement HomePageAddBtn;
@@ -21,7 +29,7 @@ public class HomePage {
 	public WebElement AddDashletAddBtn;
 	
 	@FindBy(xpath = "//span[@aria-hidden='true']")
-	public WebElement AddDeshletCloseBtn;
+	public List<WebElement> addDeshletCloseBtn;
 	
 	
 	@FindBy(xpath = "dropdown-toggle btn btn-link btn-sm menu-button")
@@ -35,9 +43,10 @@ public class HomePage {
 	
 
 	public void addAllDeshlets() {
-		List<WebElement> listings = driver.findElements(By.xpath("AddDashletAddBtn"));
+//		List<WebElement> listings = driver.findElements(By.xpath("//span[@aria-hidden='true']"));
 		//Variable atyn berse bolobu je xpath jazywkerekbi?
-		for(WebElement each : listings) {
+		
+		for(WebElement each : addDeshletCloseBtn) {
 			each.click();
 		}
 	}

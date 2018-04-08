@@ -1,7 +1,5 @@
+@us03
 Feature: Calendar Event
-
-Background: Login to app
-Given User logged in EspoCRM
 
 Scenario: Add Calendar on dashboard
 When User clicks on Add Dashlet button
