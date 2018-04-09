@@ -25,6 +25,6 @@ Scenario: Home page all visible functionalities
 	And User should see and click Menu button
 	And User should see and click Edit Dashboard button
 	And User should see and click Add Dashlet button
-	And User should see EspoCRM logo 
+	And User should see EspoCRM homepage logo 
 	And User should see Menu List on left side of the window
 	Then User should see Dashlet Windows on screen

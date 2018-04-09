@@ -37,6 +37,7 @@ public class locatorsForEspoCRM {
 	
 	@FindBy(xpath="//input[@name='emailAddress']")
 	public WebElement passwordChangeEMailBox;
+	//////////////////////
 	
 	@FindBy(id="global-search-input")
 	public WebElement searchBox;

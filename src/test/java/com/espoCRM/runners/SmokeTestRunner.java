@@ -4,11 +4,11 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-		plugin = {"http:target/cucumber-report",
+		plugin = {"html:target/cucumber-report",
 				"json:target/cucumber.json"
 		},
-		features = "src/test/resources/features",
-		glue = "com/espoCRM/step_defifnitions/",
+		features="src/test/resources/features/",
+		glue="com/espoCRM/step_definitions",
 		tags = "@smoke",
 		dryRun = false
 		)

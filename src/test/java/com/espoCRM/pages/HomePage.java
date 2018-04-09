@@ -20,8 +20,57 @@ public class HomePage {
 		driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
-	//Start related to  US002 and US003
 	
+/*  US001 --> From here Element of HOME PAGE window */	
+	@FindBy(id="global-search-input")
+	public WebElement searchBox;
+	
+	@FindBy(xpath="//a[@class='btn btn-link global-searcy-button']")
+	public WebElement searchBtn;
+	
+	@FindBy(xpath="//a[@class='notifications-button']")
+	public WebElement notificationBtn;
+	
+	@FindBy(xpath="//a[@id='nav-quick-create-dropdown']")
+	public WebElement createDropdownBtn;
+	
+	@FindBy(xpath="//a[@id='nav-menu-dropdown']")
+	public WebElement menuDropdownBtn;
+	
+	@FindBy(xpath="//button[@data-action='editTabs']")
+	public WebElement editTabBtn;
+	
+	@FindBy(xpath="//button[.='Cancel']")
+	public WebElement editCancelBtn;
+	
+	@FindBy(xpath="//button[@data-action='addDashlet']")
+	public WebElement addTabBtn;
+	
+	@FindBy(xpath="//button[.='Cancel']")
+	public WebElement addCancelBtn;
+	
+	@FindBy(xpath="//img")
+	public WebElement homePageLogo;
+	
+	@FindBy(xpath="//ul[@class='nav navbar-nav tabs']//a[contains(@class,'nav-link')]")
+	public List<WebElement> leftMenuBarElements;
+	
+	@FindBy(xpath="//span[contains(text(),'Contacts')]")
+	public WebElement menuBarContacts;
+	
+	
+	/**To verify this element has daslets on board or not, you can use attribute&value:
+	 *									-->data-gs-current-height="0"
+	 *									-->style="height: 0px;"
+	 *if their values are equal to 0, than it means there is no dashlets on the board.
+	 */
+	@FindBy(xpath="//div[contains(@class,'dashlets grid-stack grid-stack-4 row grid')]")
+	public WebElement dasletBoard;
+	
+	@FindBy(xpath="//a[@class='btn btn-primary action']")
+	public WebElement createBtn;
+	
+//Start related to  US002 and US003	
 	@FindBy(xpath = "//span[@class='glyphicon glyphicon-plus']")
 	public WebElement homePageAddBtn;
 	
