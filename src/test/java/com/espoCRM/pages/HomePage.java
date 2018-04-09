@@ -71,7 +71,7 @@ public class HomePage {
 	public WebElement createBtn;
 	
 //Start related to  US002 and US003	
-	@FindBy(xpath = "//span[@class='glyphicon glyphicon-plus']")
+	@FindBy(xpath = "//button[@data-action='addDashlet']")
 	public WebElement homePageAddBtn;
 	
 	@FindBy(xpath = "(//div[@class='grid-stack-item-content dashlet-container']/div[@data-name='Calendar'])[1]")
@@ -92,6 +92,12 @@ public class HomePage {
 	
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
 	public WebElement cofirmRemovingBtnOnDeshlet;
+	
+	@FindBy(xpath="//div[@class='modal-content']//div[@class='modal-body body']//li")
+	public List <WebElement> listOfOptions;
+	
+	@FindBy(xpath="//span[@data-action='refresh']")
+	public List<WebElement> nameOfDashlet;
 
 	//End related  to US002/US003
 	
