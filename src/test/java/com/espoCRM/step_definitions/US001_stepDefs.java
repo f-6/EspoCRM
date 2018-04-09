@@ -29,7 +29,6 @@ public class US001_stepDefs {
 	public void user_is_on_application_login_page() {
 		driver.get(Config.getProperty("urlLogin"));
 	}
-
 	@Given("^User should see EspoCRM title$")
 	public void user_should_see_EspoCRM_title() {
 //		System.out.println(driver.getTitle());

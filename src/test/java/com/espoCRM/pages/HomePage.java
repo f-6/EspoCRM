@@ -20,7 +20,7 @@ public class HomePage {
 		driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
-	
+	  
 /*  US001 --> From here Element of HOME PAGE window */	
 	@FindBy(id="global-search-input")
 	public WebElement searchBox;

@@ -14,7 +14,7 @@ public class LoginPage {
 	public LoginPage() {
 	PageFactory.initElements(driver, this);
 	}
-	
+
 /*  US001 --> From here Element of LOGIN window */	
 	@FindBy(xpath="//div[@class='logo-container']")
 	public WebElement logo;
