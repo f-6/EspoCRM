@@ -3,7 +3,7 @@ package com.espoCRM.utilities;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class ConfigurationReader {
+public class Config {
 	private static Properties configFile;
 
 	static {

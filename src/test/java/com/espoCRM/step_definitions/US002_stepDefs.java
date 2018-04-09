@@ -21,7 +21,7 @@ public class US002_stepDefs {
 	public void user_should_able_to_add_new_Dashlet_window() {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().fullscreen();
-		driver.get(ConfigurationReader.getProperty("url"));
+		driver.get(Config.getProperty("url"));
 
 
 	}

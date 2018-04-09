@@ -1,9 +1,12 @@
 package com.espoCRM.step_definitions;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import com.espoCRM.pages.HomePage;
-import com.espoCRM.utilities.ConfigurationReader;
+import com.espoCRM.utilities.Config;
 import com.espoCRM.utilities.Driver;
 
 import cucumber.api.java.en.Given;
@@ -11,12 +14,14 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class US004_stepDefs {
-	HomePage home = new HomePage();
-	
+	private HomePage home = new HomePage();
+	private WebDriver driver = Driver.getDriver();
 	
 	@Given("^User logged in espoCRM$")
 	public void user_logged_in_espoCRM() {
-	    Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+		driver.get(Config.getProperty("url"));
+	    driver.findElement(By.name("username")).sendKeys("admin");
+	    driver.findElement(By.name("password")).sendKeys("abc123" + Keys.ENTER);
 	}
 	
 	@Then("^User should verify Calendar Box displayed$")

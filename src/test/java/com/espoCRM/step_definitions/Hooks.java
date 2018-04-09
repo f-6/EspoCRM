@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 import com.espoCRM.utilities.Driver;
 
@@ -14,8 +15,9 @@ import cucumber.api.java.Before;
 public class Hooks {
 	@Before
 	public void setUp(Scenario scenario) {
-		Driver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		Driver.getDriver().manage().window().maximize();
+		WebDriver driver = Driver.getDriver();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
 	
 	@After
@@ -24,7 +26,7 @@ public class Hooks {
 			final byte[] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
 			scenario.embed(screenshot, "image/png");
 		}
-		Driver.getDriver().close();
+		
 	}
 	
 }	
