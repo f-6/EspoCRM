@@ -19,14 +19,14 @@ public class Hooks {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
-	
+
 	@After
 	public void tearDown(Scenario scenario) {
-		if(scenario.isFailed()) {
-			final byte[] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+		if (scenario.isFailed()) {
+			final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
 			scenario.embed(screenshot, "image/png");
 		}
-		
+
 	}
-	
-}	
+
+}

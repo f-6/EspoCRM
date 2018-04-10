@@ -17,8 +17,9 @@ public class ExcelUtils {
 	private static String excelFilePath;
 
 	/**
-	 * This method is to set the File path and to open the Excel file, Pass
-	    Excel Path and Sheetname as Arguments to this method
+	 * This method is to set the File path and to open the Excel file, Pass Excel
+	 * Path and Sheetname as Arguments to this method
+	 * 
 	 * @param path
 	 * @param sheetName
 	 */
@@ -35,17 +36,14 @@ public class ExcelUtils {
 		}
 	}
 
-	
-	
-	
-	
-	 /**
-	  * This method is to read the test data from the Excel cell, in this we are
-	 passing parameters as Row num and Col num
-	  * @param rowNum
-	  * @param colNum
-	  * @return
-	  */
+	/**
+	 * This method is to read the test data from the Excel cell, in this we are
+	 * passing parameters as Row num and Col num
+	 * 
+	 * @param rowNum
+	 * @param colNum
+	 * @return
+	 */
 	public static String getCellData(int rowNum, int colNum) {
 		try {
 			cell = excelWSheet.getRow(rowNum).getCell(colNum);
@@ -57,23 +55,19 @@ public class ExcelUtils {
 		}
 	}
 
-	
-	
-	
 	// This method is to write in the Excel cell, Row num and Col num are the
 	// parameters
 	public static void setCellData(String value, int rowNum, int colNum) {
 		try {
-			if(excelWSheet.getPhysicalNumberOfRows() < rowNum) {
+			if (excelWSheet.getPhysicalNumberOfRows() < rowNum) {
 				System.out.println("row creation");
 				row = excelWSheet.createRow(rowNum);
-			}else {
+			} else {
 				row = excelWSheet.getRow(rowNum);
 			}
-			
+
 			cell = row.getCell(colNum);
-			
-			
+
 			if (cell == null) {
 				cell = row.createCell(colNum);
 				cell.setCellValue(value);
@@ -101,4 +95,3 @@ public class ExcelUtils {
 
 	}
 }
-

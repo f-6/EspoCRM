@@ -23,19 +23,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BrowserUtils {
 	private static WebDriver driver = Driver.getDriver();
 
-	public static List<String> getElementsText(By locator){
-		
-		 List<WebElement> elems =driver.findElements(locator);
-		 List<String> elemTexts = new ArrayList<>();
+	public static List<String> getElementsText(By locator) {
 
-		 for(WebElement el : elems) {
-		 	if(!el.getText().isEmpty()) {
-		 		elemTexts.add(el.getText());
-		 	}
-		 }
-		 return elemTexts;
+		List<WebElement> elems = driver.findElements(locator);
+		List<String> elemTexts = new ArrayList<>();
+
+		for (WebElement el : elems) {
+			if (!el.getText().isEmpty()) {
+				elemTexts.add(el.getText());
+			}
+		}
+		return elemTexts;
 	}
-	
+
 	public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
 		WebDriverWait wait = new WebDriverWait(driver, timeToWaitInSec);
 		return wait.until(ExpectedConditions.visibilityOf(element));
@@ -90,7 +90,7 @@ public class BrowserUtils {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void switchToWindow(String targetTitle) {
 		String origin = driver.getWindowHandle();
 		for (String handle : driver.getWindowHandles()) {

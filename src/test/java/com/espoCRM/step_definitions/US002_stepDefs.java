@@ -11,8 +11,6 @@ import com.espoCRM.pages.HomePage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-
-
 public class US002_stepDefs {
 	WebDriver driver = Driver.getDriver();
 	HomePage hpage = new HomePage();
@@ -23,12 +21,11 @@ public class US002_stepDefs {
 		driver.manage().window().fullscreen();
 		driver.get(Config.getProperty("url"));
 
-
 	}
 
 	@Given("^User should able to add all Dashlets$")
 	public void user_should_able_to_add_all_Dashlets() {
-		for(WebElement each : hpage.addDeshletCloseBtn) {
+		for (WebElement each : hpage.addDeshletCloseBtn) {
 			hpage.homePageAddBtn.click();
 			each.click();
 		}
@@ -42,11 +39,11 @@ public class US002_stepDefs {
 	@Given("^User should able to Remove all dashlets$")
 	public void user_should_able_to_Remove_all_dashlets() {
 
-		for(WebElement each : hpage.dropDownBtnOnDeshlet) {
+		for (WebElement each : hpage.dropDownBtnOnDeshlet) {
 			each.click();
 		}
 
-		for(WebElement each :hpage. removeBtnOnDeshlet) {
+		for (WebElement each : hpage.removeBtnOnDeshlet) {
 			each.click();
 
 		}
