@@ -69,40 +69,54 @@ public class US008_step_Defs {
 		account.accountCreate.click();
 		Driver.highLightElement(driver, account.accountUsername);
 		Assert.assertTrue(account.accountUsername.isDisplayed());
+		account.accountUsername.sendKeys(Config.getProperty("username"));
 		Driver.highLightElement(driver, account.accountEmail);
 		Assert.assertTrue(account.accountEmail.isDisplayed());
+		account.accountEmail.sendKeys(Config.getProperty("email"));
 		Driver.highLightElement(driver, account.accountPhoneNumberBox);
 		Assert.assertTrue(account.accountPhoneNumberBox.isDisplayed());
+		account.accountPhoneNumberBox.sendKeys(Config.getProperty("phoneNumber"));
 		Driver.highLightElement(driver, account.accountPhoneNumberOptions);
 		Assert.assertTrue(account.accountPhoneNumberOptions.isDisplayed());
 		Driver.highLightElement(driver, account.accountWebsite);
 		Assert.assertTrue(account.accountWebsite.isDisplayed());
+		account.accountWebsite.sendKeys(Config.getProperty("webSite"));
 
 		// Billing address on Account Create Page
 
 		Driver.highLightElement(driver, account.accountBillingAddressStreet);
 		Assert.assertTrue(account.accountBillingAddressStreet.isDisplayed());
+		account.accountBillingAddressStreet.sendKeys(Config.getProperty("street"));
 		Driver.highLightElement(driver, account.accountBillingCity);
 		Assert.assertTrue(account.accountBillingCity.isDisplayed());
+		account.accountBillingCity.sendKeys(Config.getProperty("city"));
 		Driver.highLightElement(driver, account.accountBillingAddressState);
 		Assert.assertTrue(account.accountBillingAddressState.isDisplayed());
+		account.accountBillingAddressState.sendKeys(Config.getProperty("state"));
 		Driver.highLightElement(driver, account.accountBillingAddressPostalCode);
 		Assert.assertTrue(account.accountBillingAddressPostalCode.isDisplayed());
+		account.accountBillingAddressPostalCode.sendKeys(Config.getProperty("PostalCode"));
 		Driver.highLightElement(driver, account.accountBillingAddressCountry);
 		Assert.assertTrue(account.accountBillingAddressCountry.isDisplayed());
+		account.accountBillingAddressCountry.sendKeys(Config.getProperty("country"));
 
 		// Shipping address on Account Create Page
 
 		Driver.highLightElement(driver, account.accountShippingAddressStreet);
 		Assert.assertTrue(account.accountShippingAddressStreet.isDisplayed());
+		account.accountShippingAddressStreet.sendKeys(Config.getProperty("street"));
 		Driver.highLightElement(driver, account.accountShippingAddressCity);
 		Assert.assertTrue(account.accountShippingAddressCity.isDisplayed());
+		account.accountShippingAddressCity.sendKeys(Config.getProperty("city"));
 		Driver.highLightElement(driver, account.accountShippingState);
 		Assert.assertTrue(account.accountShippingState.isDisplayed());
+		account.accountBillingAddressState.sendKeys(Config.getProperty("state"));
 		Driver.highLightElement(driver, account.accountShippingAddressPostalCode);
 		Assert.assertTrue(account.accountShippingAddressPostalCode.isDisplayed());
+		account.accountShippingAddressPostalCode.sendKeys(Config.getProperty("PostalCode"));
 		Driver.highLightElement(driver, account.accountShippingAddressCountry);
 		Assert.assertTrue(account.accountShippingAddressCountry.isDisplayed());
+		account.accountShippingAddressCountry.sendKeys(Config.getProperty("country"));
 
 		// Details on Account Create Page
 
@@ -110,6 +124,7 @@ public class US008_step_Defs {
 		Assert.assertTrue(account.accountType.isDisplayed());
 		Driver.highLightElement(driver, account.accountSicCode);
 		Assert.assertTrue(account.accountSicCode.isDisplayed());
+		account.accountSicCode.sendKeys(Config.getProperty("sicCode"));
 		Driver.highLightElement(driver, account.accountIndustry);
 		Assert.assertTrue(account.accountIndustry.isDisplayed());
 		Driver.highLightElement(driver, account.accountDescription);
