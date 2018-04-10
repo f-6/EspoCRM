@@ -1,4 +1,4 @@
-@us001(smoke)
+@us001
 Feature: Login and Main page functionalities
 
 Scenario: Login Page all visible funtionalities
