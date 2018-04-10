@@ -1,3 +1,4 @@
+@us008
 Feature: Account page functionalities
 
 Scenario: Account Page all visible funtionalities(Negative Test)
