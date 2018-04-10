@@ -29,6 +29,7 @@ public class US001_stepDefs {
 	public void user_is_on_application_login_page() {
 		driver.get(Config.getProperty("urlLogin"));
 	}
+
 	@Given("^User should see EspoCRM title$")
 	public void user_should_see_EspoCRM_title() {
 //		System.out.println(driver.getTitle());
@@ -165,28 +166,43 @@ public class US001_stepDefs {
 	
 	@Given("^User should see EspoCRM homepage logo$")
 	public void user_should_see_EspoCRM_homepage_logo() {
+		Driver.highLightElement(driver, home.homePageLogo);
 	    Assert.assertTrue(home.homePageLogo.isDisplayed());
 	}
-
-//	Actions action = new Actions(webdriver);
-//	WebElement we = webdriver.findElement(By.xpath("//html/body/div[13]/ul/li[4]/a"));
-//	action.moveToElement(we).build().perform();
 	
 	@Given("^User should see Menu List on left side of the window$")
 	public void user_should_see_Menu_List_on_left_side_of_the_window() {
 		
 		Actions action = new Actions(driver);
+		int count = 0;
+		
 		for(WebElement we : home.leftMenuBarElements) {
 			Driver.highLightElement(driver, we);
 			action.moveToElement(we).build().perform();
 			System.out.println("=============> " + we.getText());
+			count++;
+			if(count == 11) {
+				Driver.highLightElement(driver, home.leftMenuDropdown);
+				home.leftMenuDropdown.click();
+				for(WebElement we1 : home.lefMenuDropdownElements) {
+					Driver.highLightElement(driver, we1);
+					action.moveToElement(we1).build().perform();
+					System.out.println("=============> " + we1.getText());
+					break;	
+				}
+			}
 		}
-		//WebElement el = driver.findElements(By.xpath("//ul[@class='nav navbar-nav tabs']//a[contains(@class,'nav-link')]"));
+		home.homePageLogo.click();
 	}
 
 	@Then("^User should see Dashlet Windows on screen$")
 	public void user_should_see_Dashlet_Windows_on_screen() {
-//		System.out.println(home.dasletBoard.getAttribute("data-gs-current-height"));
+//		Assert.assertTrue(System.out.println(home.dasletBoard.getAttribute("data-gs-current-height")));
+		Actions action = new Actions(driver);
+		Assert.assertTrue(home.dasletBoard.isEnabled());
+		action.clickAndHold(home.dragPlace).release(home.dropPlace).build().perform();
+//		action.dragAndDrop(home.dragPlace, home.dropPlace).build().perform();
+//		action.dragAndDropBy(home.dragPlace, 1, 1);
 		Driver.quit(7);
 	}
 

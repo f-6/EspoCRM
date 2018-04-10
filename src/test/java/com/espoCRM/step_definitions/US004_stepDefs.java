@@ -19,7 +19,7 @@ public class US004_stepDefs {
 	
 	@Given("^User logged in espoCRM$")
 	public void user_logged_in_espoCRM() {
-		driver.get(Config.getProperty("urlHome"));
+		driver.get(Config.getProperty("url"));
 	    driver.findElement(By.name("username")).sendKeys("admin");
 	    driver.findElement(By.name("password")).sendKeys("abc123" + Keys.ENTER);
 	}

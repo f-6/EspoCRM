@@ -20,7 +20,7 @@ public class HomePage {
 		driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
-	  
+	
 /*  US001 --> From here Element of HOME PAGE window */	
 	@FindBy(id="global-search-input")
 	public WebElement searchBox;
@@ -55,6 +55,18 @@ public class HomePage {
 	@FindBy(xpath="//ul[@class='nav navbar-nav tabs']//a[contains(@class,'nav-link')]")
 	public List<WebElement> leftMenuBarElements;
 	
+	@FindBy(xpath="//a[@id='nav-more-tabs-dropdown']")
+	public WebElement leftMenuDropdown;
+	
+	@FindBy(xpath="//li[@class='dropdown more open']//span[@class='full-label']")
+	public List<WebElement> lefMenuDropdownElements;
+	
+	@FindBy(xpath="//div[@id='dashlet-d213696']//h4[@class='panel-title']")
+	public WebElement dragPlace;
+	
+	@FindBy(xpath="//div[@id='dashlet-d298278']//h4[@class='panel-title']")
+	public WebElement dropPlace;
+	
 	@FindBy(xpath="//span[contains(text(),'Contacts')]")
 	public WebElement menuBarContacts;
 	
@@ -71,7 +83,7 @@ public class HomePage {
 	public WebElement createBtn;
 	
 //Start related to  US002 and US003	
-	@FindBy(xpath = "//button[@data-action='addDashlet']")
+	@FindBy(xpath = "//span[@class='glyphicon glyphicon-plus']")
 	public WebElement homePageAddBtn;
 	
 	@FindBy(xpath = "(//div[@class='grid-stack-item-content dashlet-container']/div[@data-name='Calendar'])[1]")
@@ -92,15 +104,8 @@ public class HomePage {
 	
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
 	public WebElement cofirmRemovingBtnOnDeshlet;
-	
-	@FindBy(xpath="//div[@class='modal-content']//div[@class='modal-body body']//li")
-	public List <WebElement> listOfOptions;
-	
-	@FindBy(xpath="//span[@data-action='refresh']")
-	public List<WebElement> nameOfDashlet;
 
 	//End related  to US002/US003
-	// some changes
 	
 	
 	

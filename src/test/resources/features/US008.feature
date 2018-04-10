@@ -1,13 +1,9 @@
-@US008
 Feature: Account page functionalities
 
-Background: Logging into espoCRM
-Given User logged in espoCRM
-Given User is on application Account page
-
 Scenario: Account Page all visible funtionalities(Negative Test)
-	And User should see EspoCRM title in home page
-	And User should see EspoCRM logo in home page
+	Given User is on application Account page
+	And User should see EspoCRM title
+	And User should see EspoCRM logo 
 	And User should see Search box
 	Then User should see All, Reset,Add Field buttons
 	Then User should see Create Account button
