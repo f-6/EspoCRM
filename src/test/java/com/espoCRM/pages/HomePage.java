@@ -100,11 +100,15 @@ public class HomePage {
 	public List<WebElement> removeBtnOnDeshlet;
 
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
-	public WebElement cofirmRemovingBtnOnDeshlet;
+	public  WebElement cofirmRemovingBtnOnDeshlet;
+	
+	@FindBy(xpath="//div[@class='modal-content']//div[@class='modal-body body']//li")
+	public List <WebElement> listOfOptions;
+	
+	@FindBy(xpath="//span[@data-action='refresh']")
+	public List<WebElement> nameOfDashlet;
 
 	// End related to US002/US003
 
-	public void login() {
-		System.out.println("Im loggin in");
-	}
+
 }
