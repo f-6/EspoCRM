@@ -61,17 +61,15 @@ public class US002_stepDefs {
 
 	@Given("^User should able to Remove all dashlets$")
 	public void user_should_able_to_Remove_all_dashlets() {
+		int length = hpage.dropDownBtnOnDeshlet.size();
+		for(int i = 0; i < length; i++ ) {
+		hpage.dropDownBtnOnDeshlet.get(i).click();
 
-		for(WebElement each : hpage.dropDownBtnOnDeshlet) {
-			
-			each.click();
-		}
-
-		for(WebElement each :hpage. removeBtnOnDeshlet) {
-			each.click();
-
-		}
-	}
+		hpage.removeBtnOnDeshlet.get(i).click();
+		
+		hpage.cofirmRemovingBtnOnDeshlet.click();
+	
+	}}
 
 	@Given("^User should able to see all dashlets are removed$")
 	public void user_should_able_to_see_all_dashlets_are_removed() {
