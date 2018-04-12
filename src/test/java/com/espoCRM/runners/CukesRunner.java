@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				},
 		features="src/test/resources/features/",
 		glue="com/espoCRM/step_definitions/",
-		tags = "@us008",
+		tags = "@us001, @us002, @us008",
 		dryRun = false
 )
 

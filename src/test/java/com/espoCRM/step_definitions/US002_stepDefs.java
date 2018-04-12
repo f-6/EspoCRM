@@ -25,7 +25,6 @@ public class US002_stepDefs {
 	@Given("^User should able to add new Dashlet window$")
 	public void user_should_able_to_add_new_Dashlet_window() {
 		Driver.highLightElement(driver, hpage.homePageAddBtn);
-		
 		hpage.homePageAddBtn.click();
 		
 		int count = hpage.addDashletAddBtn.size();
