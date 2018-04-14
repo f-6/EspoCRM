@@ -1,5 +1,8 @@
 package com.espoCRM.step_definitions;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -67,14 +70,17 @@ public class US002_stepDefs {
 
 	@Given("^User should able to Remove all dashlets$")
 	public void user_should_able_to_Remove_all_dashlets() {
-		int length = hpage.dropDownBtnOnDeshlet.size();
-		for(int i = 0; i<length; i=0 ) {
-
+		int length = 1;
+		boolean b = true;
+		for(int i = 0; b ;  i=0) {
+			
 			hpage.dropDownBtnOnDeshlet.get(i).click();
 
 			hpage.removeBtnOnDeshlet.get(i).click();
 
 			hpage.cofirmRemovingBtnOnDeshlet.click();
+			length = hpage.dropDownBtnOnDeshlet.size();
+			b = i < length;
 			Driver.sleep(1);
 		}
 	}
@@ -82,7 +88,11 @@ public class US002_stepDefs {
 	
 	@Given("^User should able to see all dashlets are removed$")
 	public void user_should_able_to_see_all_dashlets_are_removed() {
-	hpage.nameOfDashlet.get(0).isDisplayed();
+	try{
+		hpage.nameOfDashlet.get(0).isDisplayed();
+	}catch(IndexOutOfBoundsException m) {
+		assertTrue(true);
+	}
 	
 	}
 }
