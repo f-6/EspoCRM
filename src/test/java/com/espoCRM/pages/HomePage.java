@@ -1,6 +1,7 @@
 package com.espoCRM.pages;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -93,8 +94,12 @@ public class HomePage {
 	@FindBy(xpath = "//span[@aria-hidden='true']")
 	public List<WebElement> addDeshletCloseBtn;
 
-	@FindBy(xpath = "dropdown-toggle btn btn-link btn-sm menu-button")
+	
+	@FindBy(xpath = "//button[@class='dropdown-toggle btn btn-link btn-sm menu-button']")
 	public List<WebElement> dropDownBtnOnDeshlet;
+	
+	@FindBy(xpath = "//div[@class='grid-stack-item ui-draggable ui-resizable ui-resizable-autohide']")
+	public List<WebElement> dashletsOnTheBoard;
 
 	@FindBy(xpath = "//span[@class='glyphicon glyphicon-remove']")
 	public List<WebElement> removeBtnOnDeshlet;
@@ -107,6 +112,8 @@ public class HomePage {
 	
 	@FindBy(xpath="//span[@data-action='refresh']")
 	public List<WebElement> nameOfDashlet;
+	
+//	public boolean b=nameOfDashlet.get(0).isDisplayed();
 
 	// End related to US002/US003
 
