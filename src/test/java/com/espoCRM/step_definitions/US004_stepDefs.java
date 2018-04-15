@@ -22,6 +22,7 @@ public class US004_stepDefs {
 		driver.get(Config.getProperty("urlLogin"));
 		driver.findElement(By.name("username")).sendKeys("admin");
 		driver.findElement(By.name("password")).sendKeys("abc123" + Keys.ENTER);
+		Driver.sleep(5);
 	}
 
 	@Then("^User should verify Calendar Box displayed$")
