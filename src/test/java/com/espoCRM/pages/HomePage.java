@@ -88,16 +88,23 @@ public class HomePage {
 	@FindBy(xpath = "(//div[@class='grid-stack-item-content dashlet-container']/div[@data-name='Calendar'])[1]")
 	public WebElement calendarDashLet;
 
+	@FindBy(xpath="//button[@data-name='Calendar']")
+	public WebElement addCalendarBtn;
+
 	@FindBy(xpath = "//button[@class='btn btn-default pull-right add']")
 	public List<WebElement> addDashletAddBtn;
 
 	@FindBy(xpath = "//span[@aria-hidden='true']")
 	public List<WebElement> addDeshletCloseBtn;
 
-	
+
 	@FindBy(xpath = "//button[@class='dropdown-toggle btn btn-link btn-sm menu-button']")
 	public List<WebElement> dropDownBtnOnDeshlet;
 	
+	@FindBy(xpath = "(//div[@data-name='Calendar'])[1]//button[@class='dropdown-toggle btn btn-link btn-sm menu-button']")
+	public WebElement dropDownBtnOnCalendarDeshlet;
+	
+
 	@FindBy(xpath = "//div[@class='grid-stack-item ui-draggable ui-resizable ui-resizable-autohide']")
 	public List<WebElement> dashletsOnTheBoard;
 
@@ -106,14 +113,35 @@ public class HomePage {
 
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
 	public  WebElement cofirmRemovingBtnOnDeshlet;
-	
+
 	@FindBy(xpath="//div[@class='modal-content']//div[@class='modal-body body']//li")
 	public List <WebElement> listOfOptions;
-	
+
 	@FindBy(xpath="//span[@data-action='refresh']")
 	public List<WebElement> nameOfDashlet;
 	
-//	public boolean b=nameOfDashlet.get(0).isDisplayed();
+	@FindBy(xpath="(//div[@data-name='Calendar'])[1]//a[@class='action']")
+	public List<WebElement> optionsOnDDMenuOfCalendar;
+	
+	@FindBy(xpath="(//a[@data-action='viewCalendar'])[1]")
+	public WebElement viewButtonOnCalendarMenu;
+	
+	@FindBy(xpath="//button[@data-name='fullForm']")
+	public WebElement fullFormBtnOnCalendar;
+	
+	@FindBy(xpath="//button[@data-action='save']")
+	public WebElement saveBtnOnCalendar;
+	
+	
+	@FindBy(xpath="(//td[@class='fc-widget-content'])[5]")
+	public WebElement dateOnCalendar;
+	
+	@FindBy(xpath="//input[@name='name']")
+	public WebElement nameBoxOnCalendar;
+	
+	
+	
+	
 
 	// End related to US002/US003
 
