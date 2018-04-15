@@ -1,21 +1,24 @@
+@us009
 Feature: Contacts 
-Background: Contacts 
+
+@us009-1
 Scenario: Verify functionalities of Contacts Page 
-	Given User should see existing Contacts 
-	And Users should see Contacts on the title of the page 
-	And Contacts Text shoul be visible on the top of the page 
-	And User should see Search Box, Search button, Reset button, ADD FIELD button and Create Contact button 
+	Given User should see existing Contacts
+	And Users should see Contacts on the title of the page
+	And Contacts Text should be visible on the top of the page
+	Then User should see Search Box, Search button, Reset button, ADD FIELD button, Create Contact button 
 	
-Scenario: List of Contacts table 
-	Given User should see Contacts Table List 
-	And User should able to click one Contact from the list
-	Then User should see credential of that contact 
-	
+@us009-2
 Scenario: User creates new Contact with valid Credentials
-	Given User goes back tp Contact Page 
-	And User should be able to Click on Create Contact button 
+	Given User should be able to Click on Create Contact button
 	And User should be able to fill the empty Field boxes 
 	Then User should Click to save button 
+	
+Scenario: List of Contacts table 
+	Given User goes back to Contact Page 
+	And User should see Contacts Table List
+	And User should able to click one Contact from the list
+	Then User should see credential of that contact
 	
 Scenario: User creates new Contact with NOT valid Credentials
 	Given User goes back tp Contact Page to create with not valid credentials 
