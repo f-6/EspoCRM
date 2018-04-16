@@ -80,7 +80,7 @@ public class US002_stepDefs {
 			hpage.cofirmRemovingBtnOnDeshlet.click();
 			length = hpage.dropDownBtnOnDeshlet.size();
 			b = i < length;
-			Driver.sleep(1);
+//			Driver.sleep(1);
 		}
 	}
  
