@@ -139,6 +139,45 @@ public class HomePage {
 	@FindBy(xpath="//input[@name='name']")
 	public WebElement nameBoxOnCalendar;
 	
+//	@FindBy(xpath="(//a[@data-action='viewCalendar'])[1]")
+//	public WebElement viewButtonOnCalendarMenu;
+	
+//	@FindBy(xpath="//button[@data-name='fullForm']")
+//	public WebElement fullFormBtnOnCalendar;
+	
+//	@FindBy(xpath="//button[@data-action='save']")
+//	public WebElement saveBtnOnCalendar;
+	
+//	
+//	@FindBy(xpath="(//td[@class='fc-widget-content'])[8]")
+//	public WebElement dateOnCalendar;
+	
+	@FindBy(xpath="(//td[@class='fc-widget-content'])[9]")
+	public WebElement secondDateOnCalendar;
+	
+//	@FindBy(xpath="//input[@name='name']")
+//	public WebElement nameBoxOnCalendar;
+//	
+	@FindBy(xpath="(//input[@class='main-element form-control'])[2]")
+	public WebElement dateStartsBoxOnCalendar;
+	
+	@FindBy(xpath="(//input[@class='main-element form-control'])[3]")
+	public WebElement dateEndsBoxOnCalendar;
+	
+	@FindBy(xpath="//button[@data-name='save']")
+	public WebElement secondSaveBtnOnCalendar;
+	
+	@FindBy(xpath="	//header[@class='modal-header']")
+	public WebElement topOnCalendar;
+	
+	@FindBy(xpath="(//div[@data-name='name'])[2]")
+	public WebElement nameOverviewOnCalendar;
+	
+	@FindBy(xpath="(//div[@data-name='dateStart'])[2]")
+	public WebElement startOverviewOnCalendar;
+	
+	@FindBy(xpath="(//div[@data-name='dateEnd'])[2]")
+	public WebElement endOverviewOnCalendar;
 	
 	
 	
