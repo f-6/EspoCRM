@@ -10,16 +10,17 @@ import com.espoCRM.utilities.Driver;
 public class MenuAccountPage {
 
 	private WebDriver driver = Driver.getDriver();
-
 	public MenuAccountPage() {
 		PageFactory.initElements(driver, this);
 	}
 	/* Account Page task case US008 and US007 */
 	// Account button on left side
-
 	@FindBy(xpath = "//img")
 	public WebElement espoCRMLogo;
-
+	
+	@FindBy(xpath = "//div[@class='navbar-header']")
+	public WebElement ESPOCRMLogo;
+	
 	@FindBy(xpath = "//li[@data-name='Account']")
 	public WebElement accountBtn;
 	// All Button
