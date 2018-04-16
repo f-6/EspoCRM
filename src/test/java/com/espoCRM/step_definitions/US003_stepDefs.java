@@ -14,6 +14,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import com.espoCRM.utilities.Config;
+import com.espoCRM.utilities.Driver;
 
 public class US003_stepDefs {
 
@@ -66,20 +67,39 @@ public class US003_stepDefs {
 	public void user_clicks_any_date_and_create_new_Meeting_with_valid_credentials_in_excel_sheet_and(String file,
 			String sheet) {
 		ExcelUtils.openExcelFile(file, sheet);
-		System.out.println(ExcelUtils.getCellData(0, 2));
-		System.out.println(ExcelUtils.getCellData(1, 0));
+
+		home.dateOnCalendar.click();
+		//		home.nameBoxOnCalendar.click();
+		BrowserUtils.waitForVisibility(home.nameBoxOnCalendar, 3).click();
+		home.nameBoxOnCalendar.sendKeys(ExcelUtils.getCellData(1, 0));
+		home.dateStartsBoxOnCalendar.click();
+		home.dateStartsBoxOnCalendar.clear();
+		home.dateStartsBoxOnCalendar.sendKeys(ExcelUtils.getCellData(1, 2));
+		home.dateEndsBoxOnCalendar.click();
+		home.dateEndsBoxOnCalendar.clear();
+		home.dateEndsBoxOnCalendar.sendKeys(ExcelUtils.getCellData(1, 4));
+
 	}
 
 	@When("^User clicks Full Form and click on Save button$")
 	public void user_clicks_Full_Form_and_click_on_Save_button() {
-		home.dateOnCalendar.click();
+
 		BrowserUtils.waitForVisibility(home.fullFormBtnOnCalendar, 3).click();
-		home.nameBoxOnCalendar.sendKeys("g");
-		BrowserUtils.waitForVisibility(home.saveBtnOnCalendar, 3).click();
+	
+		home.saveBtnOnCalendar.click();
 	}
 
 	@Then("^User should verify given credentials are present in Overview box$")
 	public void user_should_verify_given_credentials_are_present_in_Overview_box() {
 
+		String expectedName = Config.getProperty("nameOnCalendar");
+		String expectedStartDate = Config.getProperty("startDate");
+		String expectedEndDate = Config.getProperty("endDate");
+		
+		Assert.assertTrue(expectedName.contains(home.nameOverviewOnCalendar.getText()));
+		Assert.assertTrue(expectedStartDate.contains(home.startOverviewOnCalendar.getText()));
+		Assert.assertTrue(expectedEndDate.contains(home.endOverviewOnCalendar.getText()));
+		
+		
 	}
 }
