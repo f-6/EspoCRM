@@ -35,6 +35,18 @@ public class BrowserUtils {
 		}
 		return elemTexts;
 	}
+	
+	public static List<String> getElementsText(List<WebElement> elements) {
+
+		List<String> elemTexts = new ArrayList<>();
+
+		for (WebElement el : elements) {
+			if (!el.getText().isEmpty()) {
+				elemTexts.add(el.getText());
+			}
+		}
+		return elemTexts;
+	}
 
 	public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
 		WebDriverWait wait = new WebDriverWait(driver, timeToWaitInSec);
