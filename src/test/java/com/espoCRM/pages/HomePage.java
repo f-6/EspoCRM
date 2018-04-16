@@ -1,6 +1,7 @@
 package com.espoCRM.pages;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -87,26 +88,99 @@ public class HomePage {
 	@FindBy(xpath = "(//div[@class='grid-stack-item-content dashlet-container']/div[@data-name='Calendar'])[1]")
 	public WebElement calendarDashLet;
 
+	@FindBy(xpath="//button[@data-name='Calendar']")
+	public WebElement addCalendarBtn;
+
 	@FindBy(xpath = "//button[@class='btn btn-default pull-right add']")
 	public List<WebElement> addDashletAddBtn;
 
 	@FindBy(xpath = "//span[@aria-hidden='true']")
 	public List<WebElement> addDeshletCloseBtn;
 
-	@FindBy(xpath = "dropdown-toggle btn btn-link btn-sm menu-button")
+
+	@FindBy(xpath = "//button[@class='dropdown-toggle btn btn-link btn-sm menu-button']")
 	public List<WebElement> dropDownBtnOnDeshlet;
+	
+	@FindBy(xpath = "(//div[@data-name='Calendar'])[1]//button[@class='dropdown-toggle btn btn-link btn-sm menu-button']")
+	public WebElement dropDownBtnOnCalendarDeshlet;
+	
+
+	@FindBy(xpath = "//div[@class='grid-stack-item ui-draggable ui-resizable ui-resizable-autohide']")
+	public List<WebElement> dashletsOnTheBoard;
 
 	@FindBy(xpath = "//span[@class='glyphicon glyphicon-remove']")
 	public List<WebElement> removeBtnOnDeshlet;
 
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
 	public  WebElement cofirmRemovingBtnOnDeshlet;
-	
+
 	@FindBy(xpath="//div[@class='modal-content']//div[@class='modal-body body']//li")
 	public List <WebElement> listOfOptions;
-	
+
 	@FindBy(xpath="//span[@data-action='refresh']")
 	public List<WebElement> nameOfDashlet;
+	
+	@FindBy(xpath="(//div[@data-name='Calendar'])[1]//a[@class='action']")
+	public List<WebElement> optionsOnDDMenuOfCalendar;
+	
+	@FindBy(xpath="(//a[@data-action='viewCalendar'])[1]")
+	public WebElement viewButtonOnCalendarMenu;
+	
+	@FindBy(xpath="//button[@data-name='fullForm']")
+	public WebElement fullFormBtnOnCalendar;
+	
+	@FindBy(xpath="//button[@data-action='save']")
+	public WebElement saveBtnOnCalendar;
+	
+	
+	@FindBy(xpath="(//td[@class='fc-widget-content'])[5]")
+	public WebElement dateOnCalendar;
+	
+	@FindBy(xpath="//input[@name='name']")
+	public WebElement nameBoxOnCalendar;
+	
+//	@FindBy(xpath="(//a[@data-action='viewCalendar'])[1]")
+//	public WebElement viewButtonOnCalendarMenu;
+	
+//	@FindBy(xpath="//button[@data-name='fullForm']")
+//	public WebElement fullFormBtnOnCalendar;
+	
+//	@FindBy(xpath="//button[@data-action='save']")
+//	public WebElement saveBtnOnCalendar;
+	
+//	
+//	@FindBy(xpath="(//td[@class='fc-widget-content'])[8]")
+//	public WebElement dateOnCalendar;
+	
+	@FindBy(xpath="(//td[@class='fc-widget-content'])[9]")
+	public WebElement secondDateOnCalendar;
+	
+//	@FindBy(xpath="//input[@name='name']")
+//	public WebElement nameBoxOnCalendar;
+//	
+	@FindBy(xpath="(//input[@class='main-element form-control'])[2]")
+	public WebElement dateStartsBoxOnCalendar;
+	
+	@FindBy(xpath="(//input[@class='main-element form-control'])[3]")
+	public WebElement dateEndsBoxOnCalendar;
+	
+	@FindBy(xpath="//button[@data-name='save']")
+	public WebElement secondSaveBtnOnCalendar;
+	
+	@FindBy(xpath="	//header[@class='modal-header']")
+	public WebElement topOnCalendar;
+	
+	@FindBy(xpath="(//div[@data-name='name'])[2]")
+	public WebElement nameOverviewOnCalendar;
+	
+	@FindBy(xpath="(//div[@data-name='dateStart'])[2]")
+	public WebElement startOverviewOnCalendar;
+	
+	@FindBy(xpath="(//div[@data-name='dateEnd'])[2]")
+	public WebElement endOverviewOnCalendar;
+	
+	
+	
 
 	// End related to US002/US003
 

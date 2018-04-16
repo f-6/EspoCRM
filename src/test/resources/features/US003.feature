@@ -1,11 +1,14 @@
 @us03 
 Feature: Calendar Event 
 
+Background: Logging into espoCRM
+Given User logged in espoCRM
+
 Scenario: Add Calendar on dashboard 
 	When User clicks on Add Dashlet button 
 	And User adds Calendar 
 	And User clicks Drop Down menu on a Calendar 
-	Then User should verify all options in the menu 
+	Then User should verify all options in the menu
 	
 Scenario: Create meeting with given Credentials 
 	When User clicks on View Calendar 
