@@ -1,9 +1,9 @@
 @us008
 Feature: Account page functionalities
-
+Background: Logging into espoCRM
+Given User logged in espoCRM
 
 Scenario: Account Page all visible funtionalities(Negative Test)
- 	Given User logged in espoCRM
  	Given User is on application Account page
 	And User should see EspoCRM title in home page
 	And User should see EspoCRM logo in home page
@@ -13,6 +13,7 @@ Scenario: Account Page all visible funtionalities(Negative Test)
 	Then User should see List Of Accounts
 
 Scenario: User is clicking Create Account button
+	
 	Given User is on application Account page
 	Given User should see Username, Email address, Phone, Web-site, Billing address(which includes: street name, city, state, postal code and country), Shipping address(which includes: street name, city, state, postal code and country),Details: Type, Sic code, Industry and Descriptions boxes
 	And User should not be able to enter wrong credantials to all requred boxes(exampl: letters to PhoneNumber box, numbers of simbols to Name box, Email should contain '@' simbol...)
