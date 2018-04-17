@@ -103,6 +103,9 @@ public class MenuContactsPage {
 	@FindBy(xpath = "//div[@class='btn-group main-btn-group']//button[@class='btn btn-danger']")
 	public WebElement anywaySaveBtn;
 	
+	@FindBy(xpath = "//div[@class='detail-button-container button-container record-buttons clearfix']")
+	public WebElement saveContainer;
+	
 //	@FindBy(xpath = "//table[@class='table']//td[@data-name='name']")
 	@FindBy(xpath = "//td[@class='cell']//a[@class='link']")
 	public List<WebElement> listOfContacts;

@@ -9,7 +9,7 @@ Scenario: Verify functionalities of Contacts Page
 	And Users should see Contacts on the title of the page
 	And Contacts Text should be visible on the top of the page
 	Then User should see All dropdown, Search Box, Search button, Reset button, ADD FIELD button, Create Contact button 
-	
+@us009-2
 Scenario: User creates new Contact with valid Credentials
 	Given User should be able to Click on Create Contact button
 	And User should be able to fill the empty Field boxes 

@@ -105,18 +105,18 @@ public class Driver {
 		    "_-.";   //special characters
 		  String email="";
 		  String temp=RandomStringUtils.random(length,allowedChars);
-		  email=temp.substring(0,temp.length()-9)+"@test.org";
+		  email=temp.substring(0,temp.length()-1)+Config.getProperty("urlLastPart");
 		  return email;
 		 }
 		 
-	//Random GENERATE EMAIL
+	//Random GENERATE NEGATIVE EMAIL
 		 public static String generateNegativeEmail(int length) {
 		  String allowedChars= //"abcdefghijklmnopqrstuvwxyz" +   //alphabets
 		    "1234567890" +   //numbers
 		    "_-.";   //special characters
 		  String email="";
 		  String temp = RandomStringUtils.random(length,allowedChars);
-		  email=temp.substring(0,temp.length()-9)+"@test.org";
+		  email=temp.substring(0,temp.length()-1)+Config.getProperty("urlLastPartNegative");
 		  return email;
 		 }
 	
