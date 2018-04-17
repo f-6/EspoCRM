@@ -31,7 +31,8 @@ public class US009_stepDefs {
 	LoginPage login = new LoginPage();
 	HomePage home = new HomePage();
 	Actions action = new Actions(driver);
-
+	int size = Integer.parseInt(Config.getProperty("lengthSize"));
+	int size2 = Integer.parseInt(Config.getProperty("lengthSize"));
 	
 
 	
@@ -79,11 +80,6 @@ public class US009_stepDefs {
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	@Given("^User should be able to Click on Create Contact button$")
 	public void user_should_be_able_to_Click_on_Create_Contact_button() {
-//		driver.get(Config.getProperty("urlLogin"));
-//		login.userNameBox.sendKeys(Config.getProperty("username"));
-//		login.userPasswordBox.sendKeys(Config.getProperty("password"));
-//		login.loginBtn.click();
-
 		con.ContactsMenuBtn.click();
 		Driver.highLightElement(driver, con.createBtn);
 		con.createBtn.click();
@@ -91,38 +87,57 @@ public class US009_stepDefs {
 
 	@Given("^User should be able to fill the empty Field boxes$")
 	public void user_should_be_able_to_fill_the_empty_Field_boxes() {
+		int size = Integer.parseInt(Config.getProperty("lengthSize"));
+		int size2 = Integer.parseInt(Config.getProperty("lengthSize"));
 		Driver.sleep(1);
+		
 		Driver.highLightElement(driver, con.contactsSalutationField);
 		Select select = new Select(con.contactsSalutationField);
 		con.contactsSalutationField.click();
+		Assert.assertTrue(con.contactsSalutationField.isDisplayed());
 
-		select.selectByVisibleText(Config.getProperty("salutation"));
-		Assert.assertEquals(select.getFirstSelectedOption().getText(), Config.getProperty("salutation"),
-				"Salutation is not matching");
+//		select.selectByVisibleText(Config.getProperty("salutation"));
+//		Assert.assertEquals(select.getFirstSelectedOption().getText(), Config.getProperty("salutation"),
+//				"Salutation is not matching");
+		
+		int salutationSize = con.salutationsChoose.size();
+		
+		Random rg = new Random();
+		int count = 0;
+		for (int idx = 1; idx <= salutationSize; ++idx){
+			int randomInt = rg.nextInt(salutationSize);
+			 for (WebElement el : con.salutationsChoose) {
+				 count++;
+				 if (randomInt == count) {
+					 el.click();
+					 break;
+				 }
+			 }
+		}
 
 		Driver.highLightElement(driver, con.firstNameField);
-		con.firstNameField.sendKeys(Config.getProperty("firstName"));
+		con.firstNameField.sendKeys(Driver.generateRandomString(size));
 
 		Driver.highLightElement(driver, con.lastNameField);
-		con.lastNameField.sendKeys(Config.getProperty("lastName"));
+		con.lastNameField.sendKeys(Driver.generateRandomString(size));
 
 		Driver.highLightElement(driver, con.accountsSelectBox);
 		con.accountsSelectBox.sendKeys(Config.getProperty("accountsField"));
 
 		for (WebElement el : con.chooseOneAccount) {
-			System.out.println(el.getText());
-			if (el.getText().equals(Config.getProperty("accountsField"))) {
-				System.out.println("==============");
+			if (el.getText().equalsIgnoreCase(Config.getProperty("accountsField"))) {
 				el.click();
 				break;
 			}
 		}
 
 		Driver.highLightElement(driver, con.emailField);
-		con.emailField.sendKeys(Config.getProperty("email"));
+		System.out.println(Driver.generateEmail(size));
+		con.emailField.sendKeys(Driver.generateEmail(size));
+		
 
 		Driver.highLightElement(driver, con.phoneField);
-		con.phoneField.sendKeys(Config.getProperty("phoneNumber"));
+		con.phoneField.sendKeys(Driver.generateRandomString(size2));
 
 		Driver.highLightElement(driver, con.addressField);
 		con.addressField.sendKeys(Config.getProperty("address"));
@@ -147,23 +162,21 @@ public class US009_stepDefs {
 	@Then("^User should Click to save button$")
 	public void user_should_Click_to_save_button() {
 		Driver.sleep(1);
-		Driver.highLightElement(driver, con.saveBtn);
-		Driver.sleep(1);
-		con.saveBtn.click();
+		if(con.saveContainer.isDisplayed()) {
+			Driver.highLightElement(driver, con.saveBtn);
+			Driver.sleep(1);
+			con.saveBtn.click();
+		} else {
 		Driver.highLightElement(driver, con.anywaySaveBtn);
 		con.anywaySaveBtn.click();
 		Driver.sleep(1);
+		}
 	}
 
 // Scenario 3
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	@Given("^User goes back to Contact Page$")
 	public void user_goes_back_to_Contact_Page() {
-//		driver.get(Config.getProperty("urlLogin"));
-//		login.userNameBox.sendKeys(Config.getProperty("username"));
-//		login.userPasswordBox.sendKeys(Config.getProperty("password"));
-//		login.loginBtn.click();
-
 		Driver.highLightElement(driver, con.ContactsMenuBtn);
 		con.ContactsMenuBtn.click();
 	}
@@ -182,6 +195,7 @@ public class US009_stepDefs {
 			System.out.println(contact.getText());
 			if(contact.getText().equals(fullName)) {
 //				Assert.assertEquals(fullName, contact.getText());
+				Driver.highLightElement(driver, contact);
 				contact.click();
 				break;
 			}
@@ -201,17 +215,13 @@ public class US009_stepDefs {
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	@Given("^User goes back to Contact Page to create with not valid credentials$")
 	public void user_goes_back_tp_Contact_Page_to_create_with_not_valid_credentials() {
-//		driver.get(Config.getProperty("urlLogin"));
-//		login.userNameBox.sendKeys(Config.getProperty("username"));
-//		login.userPasswordBox.sendKeys(Config.getProperty("password"));
-//		login.loginBtn.click();
-		
-		driver.navigate().back();
+//		driver.navigate().back();
 	}
 	
 	@Given("^User should be able to Click on Create Contact button on page$")
 	public void user_should_be_able_to_Click_on_Create_Contact_button_on_page() {
 		Driver.sleep(2);
+		Driver.highLightElement(driver, con.ContactsMenuBtn);
 		con.ContactsMenuBtn.click();
 		Driver.sleep(1);
 		Driver.highLightElement(driver, con.createBtn);
@@ -230,17 +240,18 @@ public class US009_stepDefs {
 				"Salutation is not matching");
 
 		Driver.highLightElement(driver, con.firstNameField);
-		con.firstNameField.sendKeys(Config.getProperty("firstNameN"));
+		con.firstNameField.sendKeys(Driver.generateRandomString(size2));
+		
 
 		Driver.highLightElement(driver, con.lastNameField);
-		con.lastNameField.sendKeys(Config.getProperty("lastNameN"));
+		con.lastNameField.sendKeys(Driver.generateRandomString(size2));
 
 		Driver.highLightElement(driver, con.accountsSelectBox);
 		con.accountsSelectBox.sendKeys(Config.getProperty("accountsFieldN"));
 
 		for (WebElement el : con.chooseOneAccount) {
 			System.out.println(el.getText());
-			if (el.getText().equals(Config.getProperty("accountsFieldN"))) {
+			if (el.getText().equalsIgnoreCase(Config.getProperty("accountsFieldN"))) {
 				el.click();
 				break;
 			}
@@ -250,7 +261,7 @@ public class US009_stepDefs {
 		con.emailField.sendKeys(Config.getProperty("emailN"));
 
 		Driver.highLightElement(driver, con.phoneField);
-		con.phoneField.sendKeys(Config.getProperty("phoneNumberN"));
+		con.phoneField.sendKeys(Driver.generateRandomString(size2));
 
 		Driver.highLightElement(driver, con.addressField);
 		con.addressField.sendKeys(Config.getProperty("addressN"));
@@ -300,11 +311,6 @@ public class US009_stepDefs {
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	@Given("^User goes back tp Contact Page$")
 	public void user_goes_back_tp_Contact_Page() {
-//		driver.get(Config.getProperty("urlLogin"));
-//		login.userNameBox.sendKeys(Config.getProperty("username"));
-//		login.userPasswordBox.sendKeys(Config.getProperty("password"));
-//		login.loginBtn.click();
-		
 //		driver.navigate().back();
 		con.ContactsMenuBtn.click();
 	}
