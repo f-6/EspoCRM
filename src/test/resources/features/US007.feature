@@ -1,3 +1,4 @@
+@regression
 @us007
 Feature: Account page functionalities 
 Background: Logging into espoCRM

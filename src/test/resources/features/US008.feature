@@ -1,4 +1,4 @@
-@us008
+@us008 @regression
 Feature: Account page functionalities
 Background: Logging into espoCRM
 Given User logged in espoCRM

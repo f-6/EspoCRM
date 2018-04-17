@@ -3,7 +3,7 @@
 	
 	<test name="Automated Tests">
 		<classes>
-			<class name="com.espoCRM.runner.SmokeTestRunner"></class>
+			<class name="com.espoCRM.runners.SmokeTestRunner"></class>
 		</classes>	
 	</test>
 	

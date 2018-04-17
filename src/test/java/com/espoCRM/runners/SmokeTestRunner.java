@@ -8,7 +8,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				"json:target/cucumber.json"
 		},
 		features="src/test/resources/features/",
-		glue="com/espoCRM/step_definitions",
+		glue="com/espoCRM/step_definitions",//com/espoCRM/step_definitions/US001_stepDefs.java
 		tags = "@us001",
 		dryRun = false
 		)

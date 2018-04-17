@@ -204,7 +204,7 @@ public class US001_stepDefs {
 		action.clickAndHold(home.dragPlace).release(home.dropPlace).build().perform();
 		// action.dragAndDrop(home.dragPlace, home.dropPlace).build().perform();
 		// action.dragAndDropBy(home.dragPlace, 1, 1);
-		Driver.quit(7);
+		Driver.quit(3);
 	}
 
 }
