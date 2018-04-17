@@ -1,4 +1,4 @@
-@us002
+@us002 @regression
 Feature: Dashlet window functionalities
 
 Background: Logging into espoCRM

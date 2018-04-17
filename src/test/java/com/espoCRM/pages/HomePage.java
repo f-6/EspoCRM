@@ -61,10 +61,10 @@ public class HomePage {
 	@FindBy(xpath = "//li[@class='dropdown more open']//span[@class='full-label']")
 	public List<WebElement> lefMenuDropdownElements;
 
-	@FindBy(xpath = "//div[@id='dashlet-d213696']//h4[@class='panel-title']")
+	@FindBy(xpath = "(//div[@class='panel-heading']//h4[@class='panel-title'])[1]")
 	public WebElement dragPlace;
 
-	@FindBy(xpath = "//div[@id='dashlet-d298278']//h4[@class='panel-title']")
+	@FindBy(xpath = "(//div[@class='panel-heading']//h4[@class='panel-title'])[2]")
 	public WebElement dropPlace;
 
 	@FindBy(xpath = "//span[contains(text(),'Contacts')]")

@@ -1,4 +1,4 @@
-@us004 
+@us004
 Feature: Calendar Manipulating 
 
 Background: Logging into espoCRM 

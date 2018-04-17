@@ -1,4 +1,4 @@
-@us03 
+@us03 @regression
 Feature: Calendar Event 
 
 Background: Logging into espoCRM

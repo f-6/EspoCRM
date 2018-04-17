@@ -1,4 +1,4 @@
-@us010 
+@us010 @regression
 Feature: Contacts 
 Background: Logging into espoCRM 
 	Given User logged in espoCRM 
